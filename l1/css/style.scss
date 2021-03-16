@@ -1,0 +1,378 @@
+$color-grey: #d2d6db;
+$color-grey-light: #d2d6db;
+$color-grey-middle: #76808c;
+$color-grey-dark: #4d5760;
+$color-black: #08090a;
+$color-blue: #323ebe;
+$color-blue-boton-list: #3b49df;
+$color-white: #f9fafa;
+$color-fondo: #eef0f1;
+
+.bg- {
+  &grey {
+    background-color: $color-grey;
+  }
+  &grey-light {
+    background-color: $color-grey-light;
+  }
+  &grey-middle {
+    background-color: $color-grey-middle;
+  }
+  &grey-dark {
+    background-color: $color-grey-dark;
+  }
+  &black {
+    background-color: $color-black;
+  }
+  &hover-blue {
+    background-color: $color-blue;
+  }
+  &blue-boton {
+    background-color: $color-blue-boton-list;
+  }
+  &white {
+    background-color: $color-white;
+  }
+  &fondo {
+    background-color: $color-fondo;
+  }
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 0px;
+  z-index: 1;
+  @media screen and (min-width: 768px) {
+    padding: 8px;
+    align-items: baseline;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    /*NAV BAR LEFT SIDE*/
+    .menu-left {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .menu {
+        .menu-wrapper {
+          background-color: white;
+          height: 100%;
+          width: 50vw;
+          max-width: 300px;
+          margin: 0;
+        }
+      }
+
+      .logo {
+        width: 50px;
+        height: 40px;
+        border-radius: 3px;
+      }
+      .search {
+        margin-left: 10px;
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: inherit;
+        }
+        input {
+          font-size: 12pt;
+          padding: 0 6px;
+          width: 100%;
+          max-width: 400px;
+          background-color: #f9fafa;
+          color: #41484f;
+        }
+      }
+    }
+    /*NAV BAR - RIGHT SIDE*/
+    .menu-right {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .button-post {
+        background-color: $color-blue-boton-list;
+        color: white;
+        padding: 11px 20px;
+        font-size: 16px;
+        text-align: center;
+        display: none;
+        transition: 0.5s ease-in-out;
+        transform: all;
+
+        @media screen and (min-width: 768px) {
+          display: inherit;
+        }
+        &:hover {
+          background-color: $color-blue;
+        }
+      }
+      img {
+        padding: 8px;
+        border-radius: 50%;
+        margin: 0 6px;
+        cursor: pointer;
+        &.ico-search {
+          display: inherit;
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+        &:last-of-type {
+          padding: 0;
+          width: 40px;
+        }
+        &:hover {
+          background-color: $color-grey-light;
+        }
+      }
+    }
+  }
+}
+
+.container-fluid {
+  background-color: #eef0f1;
+}
+
+#left-side {
+  background-color: #eef0f1;
+  #navbarNav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    @media screen and (min-width: 768px) {
+      position: inherit;
+      background: transparent;
+    }
+    .navbar-nav {
+      background-color: white;
+      height: 100%;
+      width: 50vw;
+      max-width: 300px;
+      margin: 0;
+      padding: 1rem;
+      @media screen and (min-width: 768px) {
+        background: transparent;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding: 16px;
+        h2 {
+          margin: 0;
+          font-size: 14pt;
+        }
+        .close-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 35px;
+          font-weight: bold;
+          font-size: 22px;
+          display: flex;
+          border-radius: 50%;
+          &:hover {
+            background-color: $color-grey-light;
+          }
+        }
+      }
+      ul {
+        padding: 1rem 0;
+        list-style: none;
+      }
+    }
+  }
+}
+
+#post-list {
+  h1 {
+    font-size: 1.14rem;
+  }
+
+  a:link,
+  a:visited,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    color: $color-black;
+  }
+  select {
+    line-height: 1.5;
+    font-size: 1rem;
+    border-color: $color-grey-middle;
+    color: $color-grey-middle;
+    option {
+      font-weight: normal;
+      display: block;
+      white-space: pre;
+      min-height: 1.2em;
+      padding: 0px 2px 1px;
+    }
+  }
+
+  .filter-desktop {
+    li {
+      &:hover {
+        background: rgba(59, 73, 223, 0.1);
+        cursor: pointer;
+        .nav-link {
+          color: rgb(59, 73, 223);
+          &:hover {
+            color: $color-blue-boton-list;
+          }
+        }
+      }
+
+      .active {
+        border-bottom: 3px solid rgb(59, 73, 223);
+        padding: 0.5rem 0;
+        margin: 0 0.5rem;
+
+        transition: 0.2s ease-in-out;
+        transform: all;
+        &:hover {
+          padding: 0.5rem 0.5rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .card {
+    h2 {
+      font-size: 1.25rem;
+      a {
+        &:hover {
+          color: $color-blue-boton-list;
+        }
+      }
+    }
+    .feature {
+      font-size: 1.5rem;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .autor {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        /*padding: 10px;}*/
+        .ico-profile {
+          width: 32px;
+          height: 32px;
+        }
+        .autor-name {
+          padding-left: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          div:first-of-type {
+            font-weight: bold;
+            font-size: 0.875rem;
+            color: $color-grey-dark;
+          }
+          div:last-of-type {
+            font-size: 0.75rem;
+            color: $color-grey-middle;
+          }
+          div:hover {
+            color: $color-black;
+          }
+        }
+      }
+      .tags {
+        margin-bottom: 0.75rem;
+        font-size: 0.875rem;
+        display: inline-block;
+        a:link,
+        a:visited,
+        a:active {
+          text-decoration: none;
+          color: $color-grey-middle;
+          line-height: 1.3;
+          border-radius: 5px;
+          padding: 0.5rem 0.3rem 0.5rem 0;
+          span {
+            color: $color-grey-light;
+          }
+        }
+        a:hover {
+          color: $color-black;
+        }
+      }
+      .reacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: $color-grey-middle;
+        /*margin: 0.5rem 0 0;*/
+        .react-left {
+          display: flex;
+        }
+        .react-left a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          margin: auto 1.5rem auto -5px;
+          color: $color-grey-dark;
+          padding: 5px;
+          &:hover {
+            background-color: $color-fondo;
+            border-radius: 2px;
+            color: $color-black;
+          }
+        }
+        .react-text {
+          display: none;
+        }
+        button {
+          padding: 0.5rem;
+          margin-left: 0.5rem;
+          border: 0;
+          background-color: $color-grey-light;
+          border-radius: 5px;
+          color: $color-grey-dark;
+          &:hover {
+            background-color: #b5bdc4;
+            cursor: pointer;
+          }
+        }
+      }
+
+      h2,
+      .tags,
+      .reacts {
+        padding-left: 40px;
+      }
+    } /*card body*/
+  } /*card*/
+} /***********END POST LIST***********/
