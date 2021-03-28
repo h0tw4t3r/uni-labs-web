@@ -1,11 +1,11 @@
-import ItemListModel from './model/List.model.js';
-import ItemListView from './view/List.view.js';
-import Controller from './controller/List.controller.js';
+import ItemListModel from './model/List.model';
+import ItemListView from './view/List.view';
+import Controller from './controller/List.controller';
 
-let itemListModel = new ItemListModel();
-let itemListView = new ItemListView(itemListModel);
+const itemListModel = new ItemListModel();
+const itemListView = new ItemListView(itemListModel);
 
-let controller = new Controller(itemListModel, itemListView);
+const controller = new Controller(itemListModel, itemListView);
 
 controller.addItem('https://google.com/');
 controller.addItem('https://instagram.com/');
