@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import {mapGetters, mapMutations} from "vuex";
-import store from "@/store";
+import { mapGetters, mapMutations } from "vuex"
+import store from "@/store"
 
 export default {
   name: 'Header',
@@ -47,13 +47,9 @@ export default {
       'email'
     ]),
     ...mapMutations([
-      'login'
-    ]),
-    logout: function () {
-      sessionStorage.clear()
-      this.login({email: '', password: '', birth: '', sex: ''})
-      console.log(this.email())
-    }
+      'login',
+      'logout'
+    ])
   },
   store: store
 }

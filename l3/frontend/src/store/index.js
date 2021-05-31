@@ -15,6 +15,12 @@ const store = createStore({
             state.email = email
             state.sex = sex
             state.birth = birth
+        },
+        logout(state) {
+            state.email = ''
+            state.sex = ''
+            state.birth = ''
+            sessionStorage.clear()
         }
     },
     getters: {
