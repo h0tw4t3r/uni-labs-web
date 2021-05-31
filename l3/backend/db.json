@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "email": "asdas@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "assas@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asszs@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asszss@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asszzzss@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asszzzzss@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asszzzzszs@asd.com",
+      "password": "1",
+      "birth": "1/1/1",
+      "sex": "male"
+    },
+    {
+      "email": "asdszas@asd.com",
+      "password": "1",
+      "birth": "1/11/1",
+      "sex": "male"
+    },
+    {
+      "email": "test@test.com",
+      "password": "123",
+      "birth": "1/1/1",
+      "sex": "male"
+    }
+  ]
+}
